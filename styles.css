@@ -126,6 +126,10 @@ nav {
     position: sticky;
     top: 0;
     z-index: 1000;
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
 }
 
 nav ul {
@@ -142,7 +146,7 @@ nav ul li {
 
 nav ul li a {
     display: block;
-    padding: 1rem 1.5rem;
+    padding: 10px 15px;
     text-decoration: none;
     color: white;
     font-weight: bold;
@@ -225,55 +229,28 @@ section h2 {
     margin: 0.5rem 0;
 }
 
-/* Ajustes responsivos */
-@media (max-width: 768px) {
-    .header h1 {
-        font-size: 2.5rem;
+/* Estilo responsivo */
+@media screen and (max-width: 768px) {
+    nav {
+      flex-direction: column;
     }
-
-    .header p {
-        font-size: 1rem;
+  
+    nav a {
+      width: 100%;
+      text-align: center;
     }
-
-    .tarjeta {
-        flex: 1 1 calc(50% - 1rem);
+  
+    footer {
+      font-size: 14px;
     }
-
-    .nav ul {
-        flex-direction: column;
+  }
+  
+  @media screen and (min-width: 769px) {
+    nav {
+      flex-direction: row;
     }
-
-    .nav ul li a {
-        padding: 1rem;
+  
+    nav a {
+      width: auto;
     }
-
-    .container {
-        padding: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .header h1 {
-        font-size: 2rem;
-    }
-
-    .header p {
-        font-size: 0.9rem;
-    }
-
-    .tarjeta {
-        flex: 1 1 100%;
-    }
-
-    .card img {
-        height: auto;
-    }
-
-    .container {
-        padding: 0.5rem;
-    }
-
-    .main {
-        padding: 1rem;
-    }
-}
+  }
