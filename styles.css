@@ -228,29 +228,59 @@ section h2 {
     color: #4CAF50;
     margin: 0.5rem 0;
 }
-
-/* Estilo responsivo */
-@media screen and (max-width: 768px) {
-    nav {
-      flex-direction: column;
-    }
+/* Menú */
+/* Menú básico: oculto inicialmente en pantallas pequeñas */
+.menu {
+    display: none;
+    flex-direction: column;
+    background-color: #4CAF50;
+    padding: 10px;
+    border-radius: 5px;
+  }
   
-    nav a {
-      width: 100%;
-      text-align: center;
-    }
-  
-    footer {
-      font-size: 14px;
+  /* Mostrar menú completo en pantallas grandes */
+  @media (min-width: 768px) {
+    .menu {
+      display: flex; 
+      flex-direction: row; 
+      justify-content: center; 
+      background-color: transparent; 
+      padding: 0;
     }
   }
   
-  @media screen and (min-width: 769px) {
-    nav {
-      flex-direction: row;
-    }
+  /* Estilo para los enlaces del menú */
+  .menu a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+  }
   
-    nav a {
-      width: auto;
+ 
+  .menu a:hover {
+    background-color: #3E8E41; 
+  }
+  
+  /* Botón Toggle (visible solo en pantallas pequeñas) */
+  .menu-toggle {
+    display: block; 
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* Ocultar el botón toggle en pantallas grandes */
+  @media (min-width: 768px) {
+    .menu-toggle {
+      display: none; /* Ocultar botón */
     }
   }
+  
+  /* Mostrar el menú desplegable en pantallas pequeñas */
+  .menu.show {
+    display: flex; /* Mostrar menú al activar */
+  }
+  
