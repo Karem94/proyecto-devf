@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap');
+
 body {
     background-image: url('https://cienciauanl.uanl.mx/wp-content/uploads/2021/04/mykyta-martynenko-_1UF_3TlKcQ-unsplash-768x512.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
     color: #060606;
+    font-family: 'Funnel Display', sans-serif; /* Fuente global */
 }
 
 
